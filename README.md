@@ -22,13 +22,13 @@ If the CAN analyzer reads data with a self.rxid value equal to 0x60b, the progra
                         print(hex_int_arr, end="")
                         print(f" TimeStamp:0x{rec[j].TimeStamp:08X}")
 ```
-## How to execute
+## How to start
 
 ## Hardware connection example
 ![](reference/photo_ref/hw_connection.jpeg)
 
 
-## Program output
+## Program(receive.py) output
 ![](reference/photo_ref/prog_output1.jpg)
 
 ## For program in controlcan folder. Remove and make hello_cpp again.
