@@ -31,4 +31,13 @@ If the CAN analyzer reads data with a self.rxid value equal to 0x60b, the progra
 ## Program output
 ![](reference/photo_ref/prog_output1.jpg)
 
+## For program in controlcan folder. Remove and make hello_cpp again.
+```shell
+cd controlcan
+rm hello_cpp
+make clean && make
+sudo ./hello_cpp
+```
+
+
 ## To do in future
