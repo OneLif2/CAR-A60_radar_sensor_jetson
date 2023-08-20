@@ -31,6 +31,4 @@ If the CAN analyzer reads data with a self.rxid value equal to 0x60b, the progra
 ## Program output
 ![](reference/photo_ref/prog_output1.jpg)
 
-![](reference/photo_ref/prog_output2.jpg)
-
 ## To do in future
