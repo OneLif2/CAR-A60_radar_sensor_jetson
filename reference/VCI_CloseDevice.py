@@ -123,9 +123,7 @@ if ret == STATUS_OK:
 if ret != STATUS_OK:
     print('CAN1通道发送失败\r\n')
 
-print("wait 5 seconds")
-time.sleep(1)
-
+print("Close Device")
 CANLib.VCI_CloseDevice(VCI_USBCAN2, 0) 
 
 # To stop the receive thread, set run to 0
