@@ -1,0 +1,1 @@
+sudo python3 /home/pi/Documents/_CANanalyzerdata_TopProversion/0_test_CAN/arm64_py/receive_oop.py
