@@ -1,7 +1,7 @@
 # CAR-A60_radar_sensor_jetson
 #jetson
 
-## Features
+## Features of receive.py
 If the CAN analyzer reads data with a self.rxid value equal to 0x60b, the program will decode the data into a more understandable format and print out information about it.
 ```python
                     if self.rxid == 0x60b:
