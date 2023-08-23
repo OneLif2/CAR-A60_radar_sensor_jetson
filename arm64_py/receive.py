@@ -116,7 +116,8 @@ class CANDevice:
         ind = 0
 
         while self.run & 0x0f:
-            if (reclen := self.CANLib.VCI_Receive(self.VCI_USBCAN2, 0, ind, rec, 3000, 100)) > 0:
+            reclen = self.CANLib.VCI_Receive(self.VCI_USBCAN2, 0, ind, rec, 3000, 100)
+            if reclen > 0:
                 for j in range(reclen):
                     self.rxid = rec[j].ID
                     int_arr = []
