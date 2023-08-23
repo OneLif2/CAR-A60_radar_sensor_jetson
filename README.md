@@ -35,7 +35,7 @@ git clone https://github.com/OneLif2/CAR-A60_radar_sensor_jetson.git
 cd CAR-A60_radar_sensor_jetson/arm64_py/
 sudo python3 receive.py
 ```
-*remark: In order to operate USB devices, the program must be executed with root privileges. This is because the program accesses low-level USB drivers in the Linux system. To ensure that the program has the necessary permissions, use the ‘sudo’ command when running it. *
+*remark: In order to operate USB devices, the program must be executed with root privileges. This is because the program accesses low-level USB drivers in the Linux system. To ensure that the program has the necessary permissions, use the ‘sudo’ command when running it.*
 
 *As an alternative, you can refer to the ‘USB权限设置.pdf’ document under the reference folder for instructions on how to configure your Jetson. By following these steps, you’ll be able to run the program without the need for ‘sudo’ privileges.*
 
