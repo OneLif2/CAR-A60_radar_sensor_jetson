@@ -22,11 +22,22 @@ If the CAN analyzer reads data with a self.rxid value equal to 0x60b, the progra
                         print(hex_int_arr, end="")
                         print(f" TimeStamp:0x{rec[j].TimeStamp:08X}")
 ```
-## How to start
 
 ## Hardware connection example
 ![](reference/photo_ref/hw_connection.jpeg)
 
+
+## How to start
+After connecting all the hardware, run the following command in the terminal.
+```shell
+cd ~/Documents
+git clone https://github.com/OneLif2/CAR-A60_radar_sensor_jetson.git
+cd CAR-A60_radar_sensor_jetson/arm64_py/
+sudo python3 receive.py
+```
+*remark: In order to operate USB devices, the program must be executed with root privileges. This is because the program accesses low-level USB drivers in the Linux system. To ensure that the program has the necessary permissions, use the ‘sudo’ command when running it. *
+
+*As an alternative, you can refer to the ‘USB权限设置.pdf’ document under the reference folder for instructions on how to configure your Jetson. By following these steps, you’ll be able to run the program without the need for ‘sudo’ privileges.*
 
 ## Program(receive.py) output
 ![](reference/photo_ref/prog_output1.jpg)
@@ -41,3 +52,8 @@ sudo ./hello_cpp
 
 
 ## To do in future
+1.) Adding featues to calculate the target radial distance:
+R=sqrt(Objects_DistLong*Objects_DistLong+Objects_Distlat*Objects_Distlat)
+
+2.) Adding featues to calculate the target Angle is:
+Tanθ = Objects_Distlat / Objects_DisLong
