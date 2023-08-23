@@ -53,7 +53,9 @@ sudo ./hello_cpp
 
 ## To do in future
 1.) Adding featues to calculate the target radial distance:
-R=sqrt(Objects_DistLong*Objects_DistLong+Objects_Distlat*Objects_Distlat)
+
+    R=sqrt(Objects_DistLong*Objects_DistLong+Objects_Distlat*Objects_Distlat)
 
 2.) Adding featues to calculate the target Angle is:
-Tanθ = Objects_Distlat / Objects_DisLong
+
+    Tanθ = Objects_Distlat / Objects_DisLong
