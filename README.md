@@ -51,11 +51,55 @@ sudo ./hello_cpp
 ```
 
 
-## To do in future
-1.) Adding featues to calculate the target radial distance:
+## New key features for receive_animation.py
 
-    R=sqrt(Objects_DistLong*Objects_DistLong+Objects_Distlat*Objects_Distlat)
+This radar sensor visualization tool is designed to offer real-time tracking and analysis of objects detected by a radar sensor. Here's what makes it stand out:
 
-2.) Adding featues to calculate the target Angle is:
+- **Dynamic Calculations and Metrics:** The tool processes raw sensor data to calculate and display the radial distance, angle, and relative velocity of each detected target. These metrics are crucial for understanding the spatial dynamics and movement patterns of the targets relative to the radar's position.
 
-    Tanθ = Objects_Distlat / Objects_DisLong
+- **Real-Time Plotting on Polar Coordinates:** Utilizing a polar coordinate system, the tool plots the position of each target, updating the visualization dynamically as new data comes in. This feature provides a clear and intuitive visual representation of the target's location and movement over time.
+
+- **Intelligent Target Identification:** Each target is annotated with a unique ID on the plot. These annotations are linked directly to their respective targets, ensuring they move in sync with the targets and enhancing the ease of tracking multiple targets simultaneously.
+
+- **Automated Cleanup with Timeout Mechanism:** To maintain the relevance and accuracy of the display, the tool automatically removes targets and their annotations if they haven't been updated within a specific timeframe (1 second). This mechanism keeps the visualization current, removing stale or out-of-range targets.
+
+- **Performance Optimization for Live Updates:** The tool is optimized to handle live data updates and refresh the visualization smoothly and efficiently. This ensures a seamless user experience, even with rapid movements or the appearance of new targets.
+
+- **Thread-Safe Operations:** Designed with concurrency in mind, the tool ensures thread-safe operations for data handling and visualization updates, making it robust and reliable for real-time applications.
+
+
+## Program(receive_animation.py) output
+![](reference/photo_ref/Figure_radar.png)
+
+## Program(receive_animation.py) output in terminal
+```shell
+Index:12945  
+
+Target ID: 1
+Target Radial Distance: 0.4000000000000341 m
+Target Angle: 4.071109992272954e-12 degrees
+Target Velocity: 0.0 m/s
+Target dynamic attribute: 0
+RCS: 0.0
+TimeStamp:0x00235979 
+
+Index:12946  
+
+Target ID: 3
+Target Radial Distance: 1.1313708498984922 m
+Target Angle: 45.0 degrees
+Target Velocity: 0.0 m/s
+Target dynamic attribute: 0
+RCS: 0.0
+TimeStamp:0x0023597C 
+
+Index:12947  
+
+Target ID: 0
+Target Radial Distance: 2.332380757938114 m
+Target Angle: -30.96375653207328 degrees
+Target Velocity: 0.0 m/s
+Target dynamic attribute: 0
+RCS: 0.0
+TimeStamp:0x0023597E
+```
